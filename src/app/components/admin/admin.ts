@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-admin',
@@ -6,12 +6,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './admin.html',
   styleUrl: './admin.css',
 })
-export class Admin implements OnInit {
+export class Admin implements OnInit,AfterViewInit {
   constructor(){
     console.log('Constructor execute');
-    
+
     // property initalization
 
+  }
+  ngAfterViewInit(): void {
+    throw new Error('Method not implemented.');
   }
   ngOnInit(): void {
     console.log('ngOnInit');
@@ -19,5 +22,9 @@ export class Admin implements OnInit {
     // api call
     // subscription
 
+
+
   }
 }
+
+
